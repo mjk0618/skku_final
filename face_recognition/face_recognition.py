@@ -16,7 +16,7 @@ model = ArcFace.load_model()
 face_detector = MTCNN()
 
 def detect_face(img):
-    img_rgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB) #mtcnn expects RGB but OpenCV read BGR
+    img_rgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
     detections = face_detector.detect_faces(img_rgb)
     detection = detections[0]
     x, y, w, h = detection["box"]
@@ -29,7 +29,7 @@ def preprocess_face(img, target_size=(112,112)):
     img = cv2.resize(img, target_size)
     img_pixels = image.img_to_array(img)
     img_pixels = np.expand_dims(img_pixels, axis = 0)
-    img_pixels /= 255 #normalize input in [0, 1]
+    img_pixels /= 255
     return img_pixels
 
 def img_to_encoding(path, use_model=False):

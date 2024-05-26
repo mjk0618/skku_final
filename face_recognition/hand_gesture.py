@@ -25,7 +25,6 @@ plt.rcParams.update({
 
 
 def display_one_image(image, title, subplot, titlesize=16):
-    """Displays one image along with the predicted category name and score."""
     plt.subplot(*subplot)
     plt.imshow(image)
     if len(title) > 0:
@@ -34,7 +33,6 @@ def display_one_image(image, title, subplot, titlesize=16):
 
 
 def display_batch_of_images_with_gestures_and_hand_landmarks(images, results):
-    """Displays a batch of images with the gesture category and its score along with the hand landmarks."""
     images = [image.numpy_view() for image in images]
     gestures = [top_gesture for (top_gesture, _) in results]
     multi_hand_landmarks_list = [multi_hand_landmarks for (_, multi_hand_landmarks) in results]
@@ -79,7 +77,7 @@ if __name__ == '__main__':
     mp_drawing = mp.solutions.drawing_utils
     mp_drawing_styles = mp.solutions.drawing_styles
 
-    parser = argparse.ArgumentParser(description="Get the encoding of two images")
+    parser = argparse.ArgumentParser(description="Get hand landmarks and gesture")
     parser.add_argument('--data_dir', default='data')
     parser.add_argument('--image', default='hand.jpg')
     

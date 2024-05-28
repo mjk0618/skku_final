@@ -1,0 +1,8 @@
+# Cache Files
+__pycache__/
+build/
+face_recognition_beta.egg-info/
+
+ArcFace.py
+*.task
+*.h5

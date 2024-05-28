@@ -59,3 +59,14 @@ python hand_gesture.py `
     --data_dir "data" `
     --image "hand.jpg"
 ```
+
+## Error Handling
+### pip Erros
+Run the following code when error occurs during package installation.
+
+```shell
+pip install --upgrade pip
+```
+
+### Unable to open file at ..
+Make sure that the absolute directory of `gesture_recognizer.task` file does not contain Korean characters.

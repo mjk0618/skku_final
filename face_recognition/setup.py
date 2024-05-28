@@ -22,23 +22,23 @@ def download_gesture_recognizer():
         out_file.write(data)
 
 
-# download_arcface()
+download_arcface()
 download_gesture_recognizer()
 
-# setup(
-#     name="face_recognition_beta",
-#     version="0.1",
-#     install_requires=[
-#         "mtcnn",
-#         "matplotlib",
-#         "opencv-python",
-#         "tensorflow",
-#         "numpy",
-#         "mediapipe",
-#         "tensorflow==2.15.0",
-#         "keras==2.15.0",
-#         "tf_keras==2.15.1",
-#         "deepface",
-#         "scikit-learn",
-#     ],
-# )
+setup(
+    name="face_recognition_beta",
+    version="0.1",
+    install_requires=[
+        "mtcnn",
+        "matplotlib",
+        "opencv-python",
+        "tensorflow",
+        "numpy",
+        "mediapipe",
+        "tensorflow==2.15.0",
+        "keras==2.15.0",
+        "tf_keras==2.15.1",
+        "deepface",
+        "scikit-learn",
+    ],
+)
